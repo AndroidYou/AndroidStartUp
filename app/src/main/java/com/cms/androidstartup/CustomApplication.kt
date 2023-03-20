@@ -3,7 +3,7 @@ package com.cms.androidstartup
 import android.app.Application
 import android.util.Log
 
-import com.cms.mylibrary.StartupManager
+import com.cms.mylibrary.manager.StartupManager
 
 
 class CustomApplication: Application() {
