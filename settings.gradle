@@ -1,0 +1,3 @@
+rootProject.name = "AndroidStartUp"
+include ':app'
+include ':mylibrary'
