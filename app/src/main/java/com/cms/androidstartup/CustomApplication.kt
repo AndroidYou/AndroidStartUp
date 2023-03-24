@@ -9,8 +9,11 @@ import com.cms.mylibrary.manager.StartupManager
 class CustomApplication: Application() {
     override fun onCreate() {
         super.onCreate()
-     //   CustomCrashHandler.init(this)
         Log.i("TAG", "InitSdk开始 ")
-        StartupManager.Builder().addStartup(InitSdkOne()).addStartup(InitSdkTwo()).build(this).start()
+        StartupManager.Builder()
+            .addStartup(InitSdkOne())
+            .addStartup(InitSdkTwo())
+            .build(this)
+            .start()
     }
 }

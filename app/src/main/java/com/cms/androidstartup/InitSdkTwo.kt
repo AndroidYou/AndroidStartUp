@@ -11,15 +11,23 @@ import com.cms.mylibrary.`interface`.AndroidStartup
  **/
 
 class InitSdkTwo : AndroidStartup<String>() {
+    /**
+     * 进行初始化工作
+     * **/
     override fun create(context: Context): String {
-        Log.i("TAG", "create: InitSdkTwo初始化完成")
+        Log.i("TAG", "create: InitSdkTwo初始化完成：当前线程："+Thread.currentThread().name)
         return "InitSdkOne create"
     }
-
+    /**
+     * 是否在主线程中调用
+     * **/
     override fun callCreateMainThread(): Boolean {
-       return false
+       return true
     }
 
+    /****
+     * 是否等待主线程完成
+     */
     override fun waitOnMainThread(): Boolean {
         return false
     }
