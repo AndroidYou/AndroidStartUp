@@ -2,7 +2,7 @@ package com.cms.androidstartup
 
 import android.content.Context
 import android.util.Log
-import com.cms.mylibrary.`interface`.AndroidStartup
+import com.cms.startup.`interface`.AndroidStartup
 
 /**
  * @author: Mr.You
