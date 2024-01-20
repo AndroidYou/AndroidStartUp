@@ -38,3 +38,16 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.1'
    
 }
+afterEvaluate {
+    rootProject.getAllprojects().forEach {
+        it.name == "app"{ app->
+            app.apply plugin: 'android-aspectjx'
+            app.android = { extension->
+                extension.aspectjx{
+                    exclude 'org.jetbrains.kotlin', "module-info", 'versions.9'
+                }
+            }
+
+        }
+    }
+}
